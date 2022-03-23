@@ -25,12 +25,14 @@ public class DMakerController {
         return Arrays.asList("jeongkyun","sanha","seonghyun");
     }
 
-    @GetMapping("/craete-developer")
+    @GetMapping("/create-developer")
     public List<String> createDevelopers(){
         //GET /developers HTTP/1.1
-        log.info("GET /craete-developer HTTP/1.1");
+        log.info("GET /create-developer HTTP/1.1");
 
-        return Collections.singletonList("seonghyun");
+        dmakerService.createDeveloper();
+
+        return Collections.singletonList("jeongkyun");
     }
 
 }

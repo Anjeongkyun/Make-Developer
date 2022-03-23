@@ -23,7 +23,8 @@ public class DmakerService {
                 .developerLevel(DeveloperLevel.JUNGNIOR)
                 .developerSkillType(DeveloperSkillType.FRONT_END)
                 .experienceYears(2)
-                .name("seonghyun")
+                .name("jeongkyun")
+                .memberId("1")
                 .age(5)
                 .build(); // build 하면 끝.
 
