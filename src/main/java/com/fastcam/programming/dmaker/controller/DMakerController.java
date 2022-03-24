@@ -30,14 +30,13 @@ public class DMakerController {
     }
 
     @PostMapping("/create-developer")
-    public List<String> createDevelopers(
+    public CreateDeveloper.Response createDevelopers(
             @Valid @RequestBody CreateDeveloper.Request request) {
 
         log.info("request : {}", request);
 
-        dmakerService.createDeveloper(request);
+        return dmakerService.createDeveloper(request);
 
-        return Collections.singletonList("jeongkyun");
     }
 
 }
