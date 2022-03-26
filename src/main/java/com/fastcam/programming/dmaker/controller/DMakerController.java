@@ -21,6 +21,7 @@ public class DMakerController {
 
     private final DmakerService dmakerService;
 
+    //개발자 리스트 출력
     @GetMapping("/developers")
     public List<String> getAllDevelopers() {
         //GET /developers HTTP/1.1
@@ -29,6 +30,7 @@ public class DMakerController {
         return Arrays.asList("jeongkyun", "sanha", "seonghyun");
     }
 
+    //DB Insert
     @PostMapping("/create-developer")
     public CreateDeveloper.Response createDevelopers(
             @Valid @RequestBody CreateDeveloper.Request request) {
